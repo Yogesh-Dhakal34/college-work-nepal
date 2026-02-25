@@ -17,6 +17,14 @@ Currently, I am a BIT (Hons) student at a HELP University affiliate college in N
 
   > Acquired skills in Linux, Networking, and Web Security.
 
+:) Technologies and Tools:
+
+  1. Languages: Python
+  2. Web: HTML5, CSS3
+  3. Databases: SQL (Foundational / Learning)
+  4. Security: Linux Terminal, Network Fundamentals
+  5. Tools: Git, GitHub, VS Code
+
 :) Transfer Goals
 
 Here, I am continually recording my academic achievements and personal projects. I plan to get a high GPA and create a technically sound portfolio that will help me transfer smoothly to a university abroad in upcoming years.
