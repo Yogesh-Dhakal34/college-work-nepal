@@ -1,3 +1,5 @@
+# To guess the number within 10 tries.
+
 import random
 
 def guess_the_number():
