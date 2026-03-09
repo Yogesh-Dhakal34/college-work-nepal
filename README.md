@@ -12,9 +12,7 @@ Currently, I am a BIT (Hons) student at a HELP University affiliate college in N
 :) Certification:
 
   1. Pre Security (New) Learning Path | TryHackMe (Feb 2026).
-
     > Have done more than 19 hours of hands, on labs.
-
     > Acquired skills in Linux, Networking, and Web Security.
 
 :) Technologies and Tools:
