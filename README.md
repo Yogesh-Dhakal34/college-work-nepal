@@ -14,7 +14,7 @@
 
 ## 🧑‍💻 About Me
 
-I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, focusing on **computer science fundamentals** and **secure development**. I plan to transfer my credits to a university in **Poland** or **South Korea** to complete my degree.
+I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, focusing on **computer science fundamentals** and **secure development**. I plan to transfer my credits to a university in **Finland** to complete my degree.
 
 ---
 
@@ -79,9 +79,6 @@ I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, f
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yogesh-Dhakal34&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Yogesh-Dhakal34&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
 
 ---
 
