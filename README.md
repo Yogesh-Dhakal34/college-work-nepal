@@ -75,13 +75,5 @@ I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, f
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Yogesh-Dhakal34&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yogesh-Dhakal34&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
-
-
----
-
-<p align="center">
   <i>✨ "Building today for a better tomorrow." ✨</i>
 </p>
