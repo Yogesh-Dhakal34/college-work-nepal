@@ -67,11 +67,6 @@ I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, f
 
 ---
 
-## 🎯 Transfer Goals
-
-> I am continually recording my **academic achievements** and **personal projects** here.  
-> My goal is to maintain a **high GPA** and build a technically sound portfolio to transfer smoothly to a university abroad in the coming years.
-
 ---
 
 <p align="center">
