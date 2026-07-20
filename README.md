@@ -14,8 +14,7 @@
 
 ## 🧑‍💻 About Me
 
-I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, focusing on **computer science fundamentals** and **secure development**. I plan to transfer my credits to a university in **Finland** to complete my degree.
-
+I am a **BIT (Hons)** student at a HELP University affiliate college in Nepal, focusing on **Foundation of Computer** and hands on Lab for **Data Networking, Database Designing and Web Development.**
 ---
 
 ## 🚀 What I'm Currently Working On
