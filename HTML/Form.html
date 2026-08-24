@@ -1,101 +1,549 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Form Example</title>
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2eff8;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: yellow;
+            background-color: purple;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 0;
+        }
+
+        .form-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .form-fields {
+            flex: 1;
+        }
+
+        .form-image {
+            width: 320px;
+            text-align: center;
+        }
+
+        .form-image img {
+            max-width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid purple;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: purple;
+            box-shadow: 0 0 4px rgba(128, 0, 128, 0.3);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .password-box {
+            display: flex;
+            gap: 5px;
+        }
+
+        .password-box input {
+            flex: 1;
+        }
+
+        .password-box button {
+            width: 70px;
+            border: none;
+            background-color: purple;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .password-box button:hover {
+            background-color: #5e005e;
+        }
+
+        fieldset {
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            padding: 12px;
+        }
+
+        fieldset input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        fieldset label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        #counter {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons input {
+            width: auto;
+            padding: 10px 25px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            background-color: purple;
+            color: white;
+        }
+
+        .reset-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .submit-btn:hover {
+            background-color: #5e005e;
+        }
+
+        .reset-btn:hover {
+            background-color: #bbb;
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: #e7f7e7;
+            color: green;
+            font-weight: bold;
+        }
+
+        @media (max-width: 750px) {
+            .form-content {
+                flex-direction: column;
+            }
+
+            .form-image {
+                width: 100%;
+                order: -1;
+            }
+
+            .form-image img {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1 style = "color: yellow; background-color: purple;">Form Example</h1>
-    <form method="post" action="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.dGNJGm-f5TtDIhhV-KVCGgHaH0%3Fcb%3Ddefcachec2%26pid%3DApi&f=1&ipt=08492bfb9e5e5cb84b40787effb79938597e849867396b375c5e9485a4962e87&ipo=images" enctype = "multipart/form-data">
 
-        <img src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.SkVm5SugGURqLxZUqzj6jwHaHa%3Fpid%3DApi&f=1&ipt=c97edadd091787cff287582a1d12db479acf3f9971c479af9df959d8307b00ed&ipo=images" height = "320px" alt="Form Image" align = "right">
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+
+    <form id="studentForm">
+
+        <div class="form-content">
+
+            <div class="form-fields">
+
+                <div class="input-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text"
+                           id="fname"
+                           name="fname"
+                           placeholder="Enter First Name"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text"
+                           id="lname"
+                           name="lname"
+                           placeholder="Enter Last Name"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Personal Email:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your Email"
+                           maxlength="30"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number"
+                           id="age"
+                           name="age"
+                           placeholder="Enter your Age"
+                           min="1"
+                           max="100"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password:</label>
+
+                    <div class="password-box">
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Enter your Password"
+                               required>
+
+                        <button type="button" onclick="togglePassword()">
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="tel">Mobile Number:</label>
+                    <input type="tel"
+                           id="tel"
+                           name="tel"
+                           placeholder="Enter your Mobile No."
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="dateofbirth">Date of Birth:</label>
+                    <input type="date"
+                           id="dateofbirth"
+                           name="dateofbirth"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label for="country">Country:</label>
+
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>
+                            Select the Country
+                        </option>
+
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="province">Province:</label>
+
+                    <select id="province" name="province" disabled>
+
+                        <option value="" selected>
+                            Select the Province
+                        </option>
+
+                        <option value="Koshi">Koshi</option>
+                        <option value="Madesh">Madesh</option>
+                        <option value="Bagmati">Bagmati</option>
+                        <option value="Gandaki">Gandaki</option>
+                        <option value="Lumbini">Lumbini</option>
+                        <option value="Karnali">Karnali</option>
+                        <option value="Sudurpashchim">
+                            Sudurpashchim
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address:</label>
+
+                    <input type="text"
+                           id="address"
+                           name="address"
+                           placeholder="Enter your Current Address"
+                           required>
+                </div>
+
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <input type="radio"
+                           id="male"
+                           name="gender"
+                           value="male"
+                           required>
+
+                    <label for="male">Male</label>
+
+                    <input type="radio"
+                           id="female"
+                           name="gender"
+                           value="female">
+
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Hobbies</legend>
+
+                    <input type="checkbox"
+                           id="hobby-reading"
+                           name="hobbies[]"
+                           value="Reading">
+
+                    <label for="hobby-reading">
+                        Reading
+                    </label>
+
+                    <input type="checkbox"
+                           id="hobby-traveling"
+                           name="hobbies[]"
+                           value="Traveling">
+
+                    <label for="hobby-traveling">
+                        Traveling
+                    </label>
+
+                    <input type="checkbox"
+                           id="hobby-gaming"
+                           name="hobbies[]"
+                           value="Gaming">
+
+                    <label for="hobby-gaming">
+                        Gaming
+                    </label>
+                </fieldset>
+
+                <div class="input-group">
+                    <label for="color">
+                        Favorite Color:
+                    </label>
+
+                    <input type="color"
+                           id="color"
+                           name="color">
+                </div>
+
+                <div class="input-group">
+                    <label for="description">
+                        Description:
+                    </label>
+
+                    <textarea id="description"
+                              name="description"
+                              rows="5"
+                              maxlength="200"
+                              placeholder="Write something about yourself..."></textarea>
+
+                    <div id="counter">
+                        0 / 200 characters
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="attachment">
+                        Choose File for CV:
+                    </label>
+
+                    <input type="file"
+                           id="attachment"
+                           name="attachment"
+                           accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="buttons">
+
+                    <input type="submit"
+                           value="Submit"
+                           class="submit-btn">
+
+                    <input type="reset"
+                           value="Reset"
+                           class="reset-btn">
+
+                </div>
+
+                <div id="message">
+                    Form submitted successfully!
+                </div>
+
+            </div>
 
 
-        <label for="fname">First Name: </label>
-        <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br><br>
+            <!-- Original image kept intact -->
+            <div class="form-image">
 
-        <label for="lname">Last Name: </label>
-        <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br><br>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.SkVm5SugGURqLxZUqzj6jwHaHa%3Fpid%3DApi&f=1&ipt=c97edadd091787cff287582a1d12db479acf3f9971c479af9df959d8307b00ed&ipo=images"
+                     height="320px"
+                     alt="Form Image">
 
-        <label for="email"> Personal Email: </label>
-        <input type="email" id="email" name="email" placeholder="Enter your Email" maxlength="30" minlength="18" pattern="[a-z0-9   @gmail]+.com"><br><br>
+            </div>
 
-        <label for="age"> Age: </label>
-        <input type="number" id="age" name="age" placeholder="Enter your Age"> <br><br>
-
-        <label for = "password"> Password: </label>
-        <input type = "password" id = "password" name = "password" placeholder ="Enter your Password"> <br><br>
-        
-        <label for="tel">Mobile Number: </label>
-        <input type="tel" id="tel" name="tel" placeholder="Enter your Mobile No."><br><br>
-
-        <label for="dateofbirth"> Date of Birth: </label>
-        <input type="date" id="dateofbirth" name="dateofbirth"> <br><br>
-
-        <label for="country"> Country: </label>
-        <select id="country" name="country">
-            <option value="" disabled selected>Select the Country</option>
-            <option value="USA">USA</option>
-            <option value="Canada">Canada</option>
-            <option value="UK">UK</option>
-            <option value="Australia">Australia</option>
-            <option value="Nepal">Nepal</option>
-            <option value="Other">Other</option>
-        </select>
-        <br><br>
-
-        <label for="province"> Province: </label>
-        <select id="province" name="province">
-            <option value="" disabled selected>Select the Province</option>
-            <option value="Koshi">Koshi</option>
-            <option value="Madesh">Madesh</option>
-            <option value="Bagmati">Bagmati</option>
-            <option value="Gandaki">Gandaki</option>
-            <option value="Lumbini">Lumbini</option>
-            <option value="Karnali">Karnali</option>
-            <option value="Sudurpashchim">Sudurpashchim</option>
-        </select>
-        <br><br>
-
-        <label for="address">Address: </label>
-        <input type="text" id="address" name="address" placeholder="Enter your Current Address"><br><br>
-        
-        <fieldset>
-            <legend>Gender</legend>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </fieldset>
-        <br><br>
-
-        <fieldset>
-            <legend>Hobbies</legend>
-            <input type="checkbox" id="hobby-reading" name="hobbies[]" value="Reading">
-            <label for="hobby-reading">Reading</label>
-            <input type="checkbox" id="hobby-traveling" name="hobbies[]" value="Traveling">
-            <label for="hobby-traveling">Traveling</label>
-            <input type="checkbox" id="hobby-gaming" name="hobbies[]" value="Gaming">
-            <label for="hobby-gaming">Gaming</label>
-        </fieldset>
-        <br><br>
-
-        <label for = "color"> Favorite Color: </label>
-        <input type = "color" id = "color" name = "color"> <br><br>
-
-        <label for="description"> Description: </label> <br>
-        <textarea id="description" name="description" rows="5" cols="50" placeholder="Write something about yourself..."></textarea>
-
-        <p>
-            <label for = "attachment"> Choose File for CV </label><br><br>
-            <input type="file" id="attachment" name="attachment" multiple>
-        </p>
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        </div>
 
     </form>
+
+</div>
+
+
+<script>
+
+    // Show / Hide Password
+    function togglePassword() {
+
+        const password = document.getElementById("password");
+        const button = document.querySelector(".password-box button");
+
+        if (password.type === "password") {
+
+            password.type = "text";
+            button.textContent = "Hide";
+
+        } else {
+
+            password.type = "password";
+            button.textContent = "Show";
+
+        }
+    }
+
+
+    // Enable Province only when Nepal is selected
+    document.getElementById("country").addEventListener("change", function () {
+
+        const province = document.getElementById("province");
+
+        if (this.value === "Nepal") {
+
+            province.disabled = false;
+            province.required = true;
+
+        } else {
+
+            province.disabled = true;
+            province.required = false;
+            province.value = "";
+
+        }
+
+    });
+
+
+    // Description character counter
+    document.getElementById("description").addEventListener("input", function () {
+
+        const counter = document.getElementById("counter");
+
+        counter.textContent =
+            this.value.length + " / 200 characters";
+
+    });
+
+
+    // Form submission
+    document.getElementById("studentForm").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const age = document.getElementById("age").value;
+        const message = document.getElementById("message");
+
+        if (age < 1 || age > 100) {
+
+            alert("Please enter an age between 1 and 100.");
+            return;
+
+        }
+
+        message.style.display = "block";
+
+        message.textContent =
+            "Form submitted successfully! Welcome, " +
+            document.getElementById("fname").value + "!";
+
+    });
+
+
+    // Reset message when form is reset
+    document.getElementById("studentForm").addEventListener("reset", function () {
+
+        setTimeout(function () {
+
+            document.getElementById("message").style.display = "none";
+
+            document.getElementById("province").disabled = true;
+
+            document.getElementById("counter").textContent =
+                "0 / 200 characters";
+
+        }, 10);
+
+    });
+
+</script>
+
 </body>
 </html>
